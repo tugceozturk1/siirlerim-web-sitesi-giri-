@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şiirler</title>
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 30%;
+            background: #FAEBCD;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .content {
+            width: 70%;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .poem-title {
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .poem-title:hover {
+            background: #f5d7b3;
+        }
+
+        .poem-content {
+            display: none;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .signature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 40px;
+            right:100px;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+          
+            border: 2px solid #ccc;
+            
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        
+        }
+
+        .name {
+            font-size: 14px;
+            font-style: italic;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .back-button {
+            position: fixed;
+
+            bottom: 20px;
+
+            left: 20px;
+
+            padding: 12px 20px;
+            background: #FAEBCD;
+            color: #333;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+            color: #FAEBCD;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>ŞİİRLERİM</h2>
+            <div class="poem-title" onclick="showPoem('poem1')">UMUT</div>
+            <div class="poem-title" onclick="showPoem('poem2')">AKŞAMSEFASI</div>
+            <div class="poem-title" onclick="showPoem('poem3')">KEDİ</div>
+            <div class="poem-title" onclick="showPoem('poem4')">DUVAR</div>
+        </div>
+
+        <div class="content">
+            <div id="poem1" class="poem-content">
+                <h2>UMUT</h2>
+                <p>Ruhumun içinde bir ışık idin ey çiçeğim,<br>
+                    Evimin çatısı akıyor ama ellerim yetişmiyor. <br>
+                    Bir dirhem umudum kalmadı, <br>
+                    Gözlerimi koşulsuz kapatamam artık. <br>
+                    Korkularım büyük, içimdeki kuş üşüyor. <br>
+                    Tüm inancımı aldın benden çiçek, <br>
+                    Sana yaslanmaya korkuyor kalbim. <br>
+                    Sevginin yüceliği bizi var edecekti, <br>
+                    Sevgi tek taraflı olmasaydı eğer. <br>
+                    Mısralarımın arasında boşluk koymuyorum, <br>
+                    Gözlerimdeki boşluk ile tamamlansın diye... <br>
+                    </p>
+            </div>
+
+            <div id="poem2" class="poem-content">
+                <h2>AKŞAMSEFASI</h2>
+                <p>Ben bir akşamsefasıyım, sen ise ışıl ışıl bir güneşsin. <br>
+                    Sözlerim bu kadar sevgili…<br>
+                    </p>
+            </div>
+            <div id="poem3" class="poem-content">
+                <h2>KEDİ</h2>
+                <p>Duvarın bir ucunda dizlerimin üstüne çökmüşüm. <br>
+                    Boylu boyunca etrafı seyreder iken,<br>
+                    İleri de bir ahşap masa, ayakları çarpık, <br>
+                    Masanın etrafında insanlar, <br>
+                    Güzel ışıl ışıl gözleri, saf güleç yüzleri…<br>
+                    Koyu bir sohbet nasılda boylu boyunca, <br>
+                    Doğruldum, bakındım sınırsızca. <br>
+                    Birkaç adım attıkça içimi ısıtan nağmeli ses tonları, <br>
+                    İçim titriyor. <br>
+                    Sandalyeye uzandım, çekip oturmak üzereyken, <br>
+                    Gök gürültüsü, yağmura karışıyor, <br>
+                    Şimşek sesleri kahkahaları bastırıyor. <br>
+                    Bir an ortalık sessizleşti, herkes kaçıştı. <br>
+                    Ufak bir brandanın altına kalakaldı bedenim, <br>
+                    Yanımda ürkmüş bir tekir, <br>
+                    Eteklerime sığınmış mırıldanıyor irice gözlerle…<br>
+                    . <br>
+                    . <br>
+                    . <br>
+                    Ah! <br>
+                    </p>
+            </div>
+            <div id="poem4" class="poem-content">
+                <h2>DUVAR</h2>
+                <p>Etrafımda çift duvarlar örülü,<br>
+                    Dışı rengarenk, içi simsiyah…<br>
+                    Ve artık; <br>
+                    Boyalarım bitti…<br>
+                    </p>
+            </div>
+        </div>
+    </div>
+    <div class="signature">
+        <img src="foto7.JPG" alt="Tuğçe ÖZTÜRK" class="profile-pic">
+        <p class="name">Tuğçe ÖZTÜRK</p>
+    </div>
+    <a href="ikinci.html" class="back-button">← ANASAYFA</a>
+
+    <script>
+        function showPoem(poemId) {
+            document.querySelectorAll(".poem-content").forEach(poem => {
+                poem.style.display = "none";
+            });
+
+            document.getElementById(poemId).style.display = "block";
+        }
+
+    </script>
+
+</body>
+
+</html>

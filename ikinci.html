@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ŞİİR</title>
+    <style>
+        .banner-container {
+            width: 100%;
+            height: 40vh;
+            position: relative;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            margin-bottom: -140px;
+            /* Banner ile altındaki slaytı birleştirir */
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .button-container {
+            position: absolute;
+            bottom: 550px;
+            /* Banner'ın altında tut */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            /* Üstte kalmasını sağla */
+        }
+
+        .button {
+            font-family: 'Poppins';
+            background: #FAEBCD;
+            color: #333;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background: rgba(0, 0, 0, 0.8);
+            color: #F3E5AB;
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .slideshow-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+            /* Üst boşluğu sıfır yap */
+        }
+
+        .slide {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.50;
+            transition: opacity 0.5s ease-in-out;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner-container">
+        <img src="b2.png" alt="Banner Resmi" class="banner-img">
+    </div>
+
+    <div class="button-container">
+        <a href="index.html" class="button">ANA SAYFA</a>
+        <a href="siirler.html" class="button">ŞİİRLER</a>
+        <a href="yorumlar.html" class="button">YORUMLAR</a>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="foto1.jpg" alt="Slayt 1">
+        </div>
+        <div class="slide fade">
+            <img src="foto2.jpg" alt="Slayt 2">
+        </div>
+        <div class="slide fade">
+            <img src="foto3.jpg" alt="Slayt 3">
+        </div>
+        <div class="slide fade">
+            <img src="foto4.jpg" alt="Slayt 4">
+        </div>
+        <div class="slide fade">
+            <img src="foto5.jpg" alt="Slayt 5">
+        </div>
+    </div>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlides() {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slideIndex = (slideIndex + 1) % slides.length; // Sonsuz döngü
+            slides[slideIndex].classList.add("active");
+        }
+
+        setInterval(showSlides, 3000); // 3 saniyede bir değiştir
+    </script>
+
+
+</body>
+
+</html>
